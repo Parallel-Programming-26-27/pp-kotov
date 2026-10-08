@@ -86,3 +86,7 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+*.docx
+
+/NSKotov/lab01/lab01.pdf
+*.xml
