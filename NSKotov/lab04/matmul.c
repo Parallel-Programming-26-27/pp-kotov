@@ -1,13 +1,12 @@
 /*
- * Matrix multiplication C = A * B (N x N, double) with OpenMP.
+ * Умножение матриц C = A * B (N x N, double) с использованием OpenMP.
  *
- * Build:  gcc -O3 -fopenmp -o matmul matmul.c
- * Run:    OMP_NUM_THREADS=<threads> ./matmul N [block] [variants]
- *   N         matrix size
- *   block     block size for blocked_omp (default 32)
- *   variants  comma-separated list of ijk_seq, ijk_omp, ikj_seq, ikj_omp,
- *             blocked_omp, or "all" (default)
- * Example: OMP_NUM_THREADS=8 ./matmul 1024 64 ikj_seq,blocked_omp
+ * Сборка: gcc -O3 -fopenmp -o matmul matmul.c
+ * Запуск: OMP_NUM_THREADS=<потоки> ./matmul N [block] [variants]
+ * N = размер матрицы
+ * block = размер блока для blocked_omp (по умолчанию 32)
+ * variants = варианты через запятую: ijk_seq, ijk_omp, ikj_seq, ikj_omp, blocked_omp, либо all (по умолчанию)
+ * Пример: OMP_NUM_THREADS=8 ./matmul 1024 64 ikj_seq,blocked_omp
  */
 #include <stdio.h>
 #include <stdlib.h>
